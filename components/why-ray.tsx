@@ -76,7 +76,15 @@ export function WhyRay() {
     <section id="why-ray" className="py-24 border-t border-[var(--color-baltic-sea-900)]">
       <div className="mx-auto max-w-[1400px] px-2.5 sm:px-6 lg:px-12">
         <AnimatedItem delay={0}>
-          <div className="mb-16 max-w-2xl">
+          <div className="relative mb-16 max-w-2xl">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -inset-x-8 -inset-y-6 -z-10 blur-2xl"
+              style={{
+                background:
+                  "radial-gradient(55% 60% at 30% 50%, color-mix(in oklch, var(--background) 82%, transparent) 0%, color-mix(in oklch, var(--background) 45%, transparent) 50%, transparent 78%)",
+              }}
+            />
             <span className="text-sm font-medium text-[var(--color-keppel-400)] uppercase tracking-wider">
               Why RAY
             </span>

@@ -57,8 +57,16 @@ export function RequirementsFlow() {
     <section ref={ref} className="py-24 border-t border-[var(--color-baltic-sea-900)] overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-2.5 sm:px-6 lg:px-12">
         <div
-          className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-12 blur-sm"}`}
+          className={`relative text-center max-w-2xl mx-auto mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-12 blur-sm"}`}
         >
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-x-8 -inset-y-6 -z-10 blur-2xl"
+            style={{
+              background:
+                "radial-gradient(55% 65% at 50% 50%, color-mix(in oklch, var(--background) 82%, transparent) 0%, color-mix(in oklch, var(--background) 45%, transparent) 50%, transparent 78%)",
+            }}
+          />
           <span className="text-sm font-medium text-[var(--color-keppel-400)] uppercase tracking-wider">
             How it works
           </span>
@@ -106,10 +114,20 @@ export function RequirementsFlow() {
                     {step.number}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-[var(--color-baltic-sea-100)] mb-2 text-balance">
+                <h3 className="relative text-xl font-semibold text-[var(--color-baltic-sea-100)] mb-2 text-balance">
                   {step.title}
                 </h3>
-                <p className="text-[var(--color-baltic-sea-400)] leading-relaxed">{step.description}</p>
+                <p className="relative text-[var(--color-baltic-sea-300)] leading-relaxed">
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -inset-x-4 -inset-y-3 -z-10 blur-xl"
+                    style={{
+                      background:
+                        "radial-gradient(70% 80% at 40% 50%, color-mix(in oklch, var(--background) 78%, transparent) 0%, transparent 80%)",
+                    }}
+                  />
+                  {step.description}
+                </p>
               </div>
             </div>
           ))}

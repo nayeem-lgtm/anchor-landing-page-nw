@@ -50,7 +50,16 @@ export function HeroSection() {
       <div className="relative mx-auto max-w-[1400px] px-2.5 sm:px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12 lg:gap-20">
           {/* Left column - text content */}
-          <div className="lg:max-w-xl lg:min-h-screen flex flex-col justify-center pt-24 lg:pt-20">
+          <div className="relative lg:max-w-xl lg:min-h-screen flex flex-col justify-center pt-24 lg:pt-20">
+            {/* Soft scrim to keep text legible over the animated background */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -inset-x-8 -inset-y-6 -z-10 blur-2xl"
+              style={{
+                background:
+                  "radial-gradient(60% 55% at 35% 50%, color-mix(in oklch, var(--background) 85%, transparent) 0%, color-mix(in oklch, var(--background) 55%, transparent) 45%, transparent 75%)",
+              }}
+            />
             <div className="inline-flex items-center gap-2 rounded-full border border-[var(--color-keppel-700)] bg-[var(--color-keppel-950)] px-3 py-1 text-xs text-[var(--color-keppel-300)] mb-8 w-fit">
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-keppel-400)]" />
               Performance-driven acquisition

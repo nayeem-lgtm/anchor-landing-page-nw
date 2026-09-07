@@ -174,8 +174,16 @@ export function Testimonials() {
       {/* Section header */}
       <div className="mx-auto max-w-[1400px] px-2.5 sm:px-6 lg:px-12">
         <div
-          className={`text-center max-w-2xl mx-auto mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-12 blur-sm"}`}
+          className={`relative text-center max-w-2xl mx-auto mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-12 blur-sm"}`}
         >
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-x-8 -inset-y-6 -z-10 blur-2xl"
+            style={{
+              background:
+                "radial-gradient(55% 65% at 50% 50%, color-mix(in oklch, var(--background) 82%, transparent) 0%, color-mix(in oklch, var(--background) 45%, transparent) 50%, transparent 78%)",
+            }}
+          />
           <span className="text-sm font-medium text-[var(--color-keppel-400)] uppercase tracking-wider">
             Testimonials
           </span>
