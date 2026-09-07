@@ -6,7 +6,21 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen pb-12 overflow-hidden">
       <div className="absolute inset-0 -top-20 -left-20 -right-20 overflow-hidden">
-        <div className="absolute inset-0 grid grid-cols-10 sm:grid-cols-15 lg:grid-cols-20 gap-3 sm:gap-4 lg:gap-5 p-4 opacity-30">
+        {/* Rotating aurora spotlight behind the headline */}
+        <div
+          className="hero-animate absolute left-[30%] top-[38%] h-[900px] w-[900px] rounded-full blur-[120px] will-change-transform"
+          style={{
+            background:
+              "conic-gradient(from 0deg, color-mix(in oklch, var(--color-keppel-500) 22%, transparent), transparent 35%, color-mix(in oklch, var(--color-keppel-700) 18%, transparent) 60%, transparent 85%, color-mix(in oklch, var(--color-keppel-500) 22%, transparent))",
+            animation: "hero-spotlight 40s linear infinite",
+          }}
+        />
+
+        {/* Subtly breathing tech grid */}
+        <div
+          className="hero-animate absolute inset-0 grid grid-cols-10 sm:grid-cols-15 lg:grid-cols-20 gap-3 sm:gap-4 lg:gap-5 p-4 opacity-30 will-change-[opacity]"
+          style={{ animation: "ambient-pulse 9s ease-in-out infinite" }}
+        >
           {[...Array(240)].map((_, i) => (
             <div
               key={i}
@@ -15,9 +29,22 @@ export function HeroSection() {
             />
           ))}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+
+        {/* Sweeping light beam */}
+        <div className="absolute inset-x-0 top-[26%] h-px overflow-hidden opacity-70">
+          <div
+            className="hero-animate absolute inset-y-0 w-2/3 will-change-transform"
+            style={{
+              background:
+                "linear-gradient(to right, transparent, color-mix(in oklch, var(--color-keppel-400) 70%, transparent), transparent)",
+              animation: "beam-sweep 11s ease-in-out infinite",
+            }}
+          />
+        </div>
+
+        {/* Soft fades that let the animated site background show through instead of a solid fill */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/40" />
       </div>
 
       <div className="relative mx-auto max-w-[1400px] px-2.5 sm:px-6 lg:px-12">
