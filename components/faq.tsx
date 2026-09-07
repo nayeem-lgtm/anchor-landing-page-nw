@@ -5,34 +5,39 @@ import { CaretDown } from "@phosphor-icons/react/dist/ssr"
 
 const FAQS = [
   {
-    question: "How does pricing work?",
+    question: "What verticals do you cover?",
     answer:
-      "You pay for compute hours used. The free tier includes 1,000 hours/month. Pro starts at $49/month with 10,000 hours included. Additional usage is billed at $0.005/hour. We only charge when your agents are actively running.",
+      "We generate leads and calls across Insurance (Final Expense, ACA, Medicare, Auto, Home, Life), Home Services (Solar, Roofing, HVAC, Windows), Finance (Debt, Tax Relief, Mortgage), and Legal (Mass Tort, Personal Injury).",
   },
   {
-    question: "What languages and frameworks are supported?",
+    question: "Are your leads exclusive, or resold?",
     answer:
-      "We support Python 3.9+ and Node.js 18+ natively. You can use any framework - LangChain, AutoGPT, CrewAI, or your own custom agents. Our SDK provides optional helpers but isn't required.",
+      "You choose. We offer real-time exclusive leads and calls that are delivered only to you, as well as shared options for buyers who want lower cost per lead. We never quietly resell an exclusive lead.",
   },
   {
-    question: "How do you handle security and isolation?",
+    question: "How are leads and calls delivered?",
     answer:
-      "Each agent runs in an isolated gVisor sandbox with its own network namespace. We never share compute resources between customers. Enterprise plans include dedicated infrastructure and SOC 2 compliance.",
+      "In real time — via ping/post, direct API, or CRM integration for leads, and live warm transfers for calls. You'll typically be up and receiving volume within days.",
   },
   {
-    question: "Can I bring my own models?",
+    question: "How do you ensure lead quality?",
     answer:
-      "Yes. Connect any LLM provider - OpenAI, Anthropic, Cohere, or self-hosted models. We don't intercept or log your API calls. Your model keys stay encrypted and never leave your environment.",
+      "Every source is screened by our dedicated QA team before it ever reaches you, and traffic is monitored continuously. Leads are freshly generated — never aged or recycled data.",
   },
   {
-    question: "What happens if my agent needs GPUs?",
+    question: "How do you handle TCPA and compliance?",
     answer:
-      "GPU-accelerated instances (H100, A100) are available on-demand. Your agent can request GPU resources programmatically when needed and automatically release them when done. You only pay for active GPU time.",
+      "All leads and calls are TCPA opt-in and backed by TrustedForm and/or Jornaya certificates, so you have documented consent on every record.",
   },
   {
-    question: "Do you offer SLAs?",
+    question: "What's your policy on bad leads?",
     answer:
-      "Pro plans include 99.9% uptime SLA. Enterprise plans include 99.99% SLA with guaranteed response times and a dedicated support channel. We publish real-time status at status.anchor.run.",
+      "We have a clear return/credit policy. If a lead falls outside the agreed criteria (wrong vertical, invalid contact info, duplicate, etc.), you can submit it for review and credit.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "Tell us your target vertical, geos, and volume. We'll match vetted traffic, set up delivery, and assign you a dedicated account manager to optimize as you scale.",
   },
 ]
 
