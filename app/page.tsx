@@ -1,4 +1,5 @@
 import { Header } from "@/components/header"
+import { SiteBackground } from "@/components/site-background"
 import { HeroSection } from "@/components/hero-section"
 import { LogoCloud } from "@/components/logo-cloud"
 import { WhyRay } from "@/components/why-ray"
@@ -13,9 +14,10 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="relative min-h-screen bg-background">
+      <SiteBackground />
       <Header />
-      <main>
+      <main className="relative z-10">
         <HeroSection />
         <LogoCloud />
         <WhyRay />
