@@ -1,8 +1,8 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { LogoCloud } from "@/components/logo-cloud"
-import { BentoGrid } from "@/components/bento-grid"
-import { HowItWorks } from "@/components/how-it-works"
+import { WhyRay } from "@/components/why-ray"
+import { RequirementsFlow } from "@/components/requirements-flow"
 import { TerminalDemo } from "@/components/terminal-demo"
 import { Pricing } from "@/components/pricing"
 import { Testimonials } from "@/components/testimonials"
@@ -18,8 +18,8 @@ export default function Home() {
       <main>
         <HeroSection />
         <LogoCloud />
-        <BentoGrid />
-        <HowItWorks />
+        <WhyRay />
+        <RequirementsFlow />
         <TerminalDemo />
         <Testimonials />
         <Comparison />
