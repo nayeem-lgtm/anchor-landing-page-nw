@@ -5,7 +5,6 @@ import { LogoCloud } from "@/components/logo-cloud"
 import { WhyRay } from "@/components/why-ray"
 import { RequirementsFlow } from "@/components/requirements-flow"
 import { DemandEngine } from "@/components/demand-engine"
-import { Pricing } from "@/components/pricing"
 import { Testimonials } from "@/components/testimonials"
 import { Comparison } from "@/components/comparison"
 import { FAQ } from "@/components/faq"
@@ -25,7 +24,6 @@ export default function Home() {
         <DemandEngine />
         <Testimonials />
         <Comparison />
-        <Pricing />
         <FAQ />
         <FinalCTA />
       </main>
