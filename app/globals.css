@@ -209,3 +209,13 @@
     transform: translateX(0);
   }
 }
+
+/* Seamless right-to-left marquee for the partner logo cloud */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
