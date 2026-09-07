@@ -5,14 +5,11 @@ import { Check, X, Minus } from "@phosphor-icons/react/dist/ssr"
 
 const FEATURES: { name: string; ray: boolean | "partial"; vendor: boolean | "partial" }[] = [
   { name: "Leads sold once, never resold to 3–5 competitors", ray: true, vendor: false },
-  { name: "Real-time, freshly generated (no aged/recycled data)", ray: true, vendor: false },
   { name: "Every lead & call screened by a live QA team", ray: true, vendor: false },
   { name: "TCPA + TrustedForm proof on every lead & call", ray: true, vendor: "partial" },
   { name: "Return / credit policy for bad leads", ray: true, vendor: false },
   { name: "Filter by state, age, income & 20+ attributes", ray: true, vendor: "partial" },
-  { name: "Live call transfers, not just form fills", ray: true, vendor: false },
   { name: "You control daily caps & pacing", ray: true, vendor: false },
-  { name: "Real-time dashboard with source-level data", ray: true, vendor: false },
   { name: "One partner across Insurance, Home, Finance & Legal", ray: true, vendor: false },
   { name: "Dedicated account manager", ray: true, vendor: false },
   { name: "Live and scaling in days, not months", ray: true, vendor: true },
