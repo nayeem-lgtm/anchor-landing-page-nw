@@ -40,7 +40,7 @@ const MicrosoftLogo = () => (
 
 // Wordmark logos for platforms not in the icon registry — rendered as clean text marks
 const Wordmark = ({ label }: { label: string }) => (
-  <span className="text-xl font-semibold tracking-tight whitespace-nowrap">{label}</span>
+  <span className="text-base font-semibold tracking-tight whitespace-nowrap">{label}</span>
 )
 
 type LogoItem = {
@@ -63,20 +63,34 @@ const LOGOS: LogoItem[] = [
 
 function LogoRow({ ariaHidden }: { ariaHidden?: boolean }) {
   return (
-    <ul className="flex shrink-0 items-center gap-x-16 pr-16" aria-hidden={ariaHidden}>
+    <ul className="flex shrink-0 items-center gap-x-5 pr-5" aria-hidden={ariaHidden}>
       {LOGOS.map((logo) => (
-        <li
-          key={logo.name}
-          className="flex items-center gap-2.5 text-[var(--color-baltic-sea-400)] transition-colors duration-300 hover:text-[var(--color-baltic-sea-100)]"
-        >
-          {logo.icon ? (
-            <>
-              {logo.icon}
-              <span className="text-base font-medium whitespace-nowrap">{logo.name}</span>
-            </>
-          ) : (
-            <Wordmark label={logo.name} />
-          )}
+        <li key={logo.name}>
+          <div
+            className="group/chip relative flex items-center gap-2.5 rounded-full border border-[var(--color-baltic-sea-800)] bg-[var(--color-baltic-sea-900)]/40 px-5 py-3 text-[var(--color-baltic-sea-400)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--color-keppel-800)] hover:bg-[var(--color-baltic-sea-900)]/70 hover:text-[var(--color-baltic-sea-50)]"
+          >
+            {/* Soft keppel glow on hover */}
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 rounded-full opacity-0 transition-opacity duration-300 group-hover/chip:opacity-100"
+              style={{
+                background:
+                  "radial-gradient(120% 120% at 50% 0%, color-mix(in oklch, var(--color-keppel-500) 14%, transparent), transparent 70%)",
+              }}
+            />
+            <span className="relative flex items-center gap-2.5">
+              {logo.icon ? (
+                <>
+                  <span className="text-[var(--color-baltic-sea-300)] transition-colors duration-300 group-hover/chip:text-[var(--color-keppel-400)]">
+                    {logo.icon}
+                  </span>
+                  <span className="text-base font-medium whitespace-nowrap">{logo.name}</span>
+                </>
+              ) : (
+                <Wordmark label={logo.name} />
+              )}
+            </span>
+          </div>
         </li>
       ))}
     </ul>
