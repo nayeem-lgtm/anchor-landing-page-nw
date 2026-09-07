@@ -22,7 +22,7 @@ export function Header() {
         <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-2.5 sm:px-6 lg:px-12">
           {/* Logo - always stays at top */}
           <a href="#" className="flex items-center" aria-label="RAY Advertising home">
-            <img src="/images/ray-logo-white.png" alt="RAY Advertising" className="h-14 w-14 object-contain" />
+            <img src="/images/ray-logo-white.png" alt="RAY Advertising" className="h-24 w-24 object-contain" />
           </a>
 
           {/* Navigation - only shows at top, replaced by floating CTA when scrolled */}
