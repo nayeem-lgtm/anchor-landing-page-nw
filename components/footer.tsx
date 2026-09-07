@@ -1,4 +1,4 @@
-import { Cube, GithubLogo, TwitterLogo, DiscordLogo } from "@phosphor-icons/react/dist/ssr"
+import { GithubLogo, TwitterLogo, DiscordLogo } from "@phosphor-icons/react/dist/ssr"
 
 export function Footer() {
   return (
@@ -7,14 +7,16 @@ export function Footer() {
         <div className="flex flex-col gap-12 lg:flex-row lg:justify-between">
           {/* Brand column */}
           <div className="lg:max-w-xs">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-baltic-sea-800)]">
-                <Cube weight="fill" className="h-5 w-5 text-[var(--color-baltic-sea-400)]" />
-              </div>
-              <span className="text-xl font-semibold text-[var(--color-baltic-sea-300)]">Anchor</span>
+            <div className="flex items-center gap-2">
+              <img
+                src="/images/ray-logo-white.png"
+                alt="RAY Advertising"
+                className="h-9 w-9 object-contain opacity-80"
+              />
+              <span className="text-xl font-semibold text-[var(--color-baltic-sea-300)]">RAY</span>
             </div>
             <p className="mt-4 text-sm text-[var(--color-baltic-sea-500)]">
-              Container infrastructure for the next generation of autonomous agents.
+              High intent. High impact. Connecting real consumer demand with businesses ready to serve it.
             </p>
             <div className="mt-6 flex items-center gap-3">
               <a
@@ -160,7 +162,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-[var(--color-baltic-sea-900)] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-xs text-[var(--color-baltic-sea-600)]">© 2025 Anchor. All rights reserved.</span>
+          <span className="text-xs text-[var(--color-baltic-sea-600)]">© 2025 RAY Advertising. All rights reserved.</span>
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-[var(--color-keppel-400)] animate-pulse" />
             <span className="text-xs text-[var(--color-baltic-sea-500)]">All systems operational</span>
