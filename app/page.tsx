@@ -1,10 +1,10 @@
 import { Header } from "@/components/header"
+import { SiteBackground } from "@/components/site-background"
 import { HeroSection } from "@/components/hero-section"
 import { LogoCloud } from "@/components/logo-cloud"
-import { BentoGrid } from "@/components/bento-grid"
-import { HowItWorks } from "@/components/how-it-works"
-import { TerminalDemo } from "@/components/terminal-demo"
-import { Pricing } from "@/components/pricing"
+import { WhyRay } from "@/components/why-ray"
+import { RequirementsFlow } from "@/components/requirements-flow"
+import { DemandEngine } from "@/components/demand-engine"
 import { Testimonials } from "@/components/testimonials"
 import { Comparison } from "@/components/comparison"
 import { FAQ } from "@/components/faq"
@@ -13,17 +13,17 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="relative min-h-screen bg-background">
+      <SiteBackground />
       <Header />
-      <main>
+      <main className="relative z-10">
         <HeroSection />
         <LogoCloud />
-        <BentoGrid />
-        <HowItWorks />
-        <TerminalDemo />
+        <WhyRay />
+        <RequirementsFlow />
+        <DemandEngine />
         <Testimonials />
         <Comparison />
-        <Pricing />
         <FAQ />
         <FinalCTA />
       </main>

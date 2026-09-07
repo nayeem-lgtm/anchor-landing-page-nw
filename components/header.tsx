@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Cube, Lightning } from "@phosphor-icons/react/dist/ssr"
+import { Lightning } from "@phosphor-icons/react/dist/ssr"
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -21,23 +21,9 @@ export function Header() {
       <header className="fixed top-0 left-0 right-0 z-50">
         <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-2.5 sm:px-6 lg:px-12">
           {/* Logo - always stays at top */}
-          <div className="flex items-center gap-3">
-            <div className="relative">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-baltic-sea-100)]">
-                <Cube weight="fill" className="h-5 w-5 text-[var(--color-baltic-sea-950)]" />
-              </div>
-              <div className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full border-2 border-[var(--color-baltic-sea-950)] bg-[var(--color-keppel-400)]" />
-            </div>
-            <span
-              className={`
-                text-xl font-semibold tracking-tight text-[var(--color-baltic-sea-50)]
-                transition-all duration-500 overflow-hidden whitespace-nowrap
-                ${scrolled ? "max-w-0 opacity-0" : "max-w-[100px] opacity-100"}
-              `}
-            >
-              Anchor
-            </span>
-          </div>
+          <a href="#" className="flex items-center" aria-label="RAY Advertising home">
+            <img src="/images/ray-logo-white.png" alt="RAY Advertising" className="h-14 w-14 object-contain" />
+          </a>
 
           {/* Navigation - only shows at top, replaced by floating CTA when scrolled */}
           <nav

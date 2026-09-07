@@ -3,15 +3,19 @@
 import { useEffect, useRef, useState } from "react"
 import { Check, X, Minus } from "@phosphor-icons/react/dist/ssr"
 
-const FEATURES = [
-  { name: "Sub-100ms cold starts", anchor: true, kubernetes: false, lambda: "partial" },
-  { name: "GPU acceleration", anchor: true, kubernetes: true, lambda: false },
-  { name: "Zero config deployment", anchor: true, kubernetes: false, lambda: "partial" },
-  { name: "Built-in observability", anchor: true, kubernetes: false, lambda: "partial" },
-  { name: "Auto-scaling to zero", anchor: true, kubernetes: "partial", lambda: true },
-  { name: "Agent-native primitives", anchor: true, kubernetes: false, lambda: false },
-  { name: "Multi-agent orchestration", anchor: true, kubernetes: false, lambda: false },
-  { name: "Global edge deployment", anchor: true, kubernetes: "partial", lambda: true },
+const FEATURES: { name: string; ray: boolean | "partial"; vendor: boolean | "partial" }[] = [
+  { name: "Leads sold once, never resold to 3–5 competitors", ray: true, vendor: false },
+  { name: "Real-time, freshly generated (no aged/recycled data)", ray: true, vendor: false },
+  { name: "Every lead & call screened by a live QA team", ray: true, vendor: false },
+  { name: "TCPA + TrustedForm proof on every lead & call", ray: true, vendor: "partial" },
+  { name: "Return / credit policy for bad leads", ray: true, vendor: false },
+  { name: "Filter by state, age, income & 20+ attributes", ray: true, vendor: "partial" },
+  { name: "Live call transfers, not just form fills", ray: true, vendor: false },
+  { name: "You control daily caps & pacing", ray: true, vendor: false },
+  { name: "Real-time dashboard with source-level data", ray: true, vendor: false },
+  { name: "One partner across Insurance, Home, Finance & Legal", ray: true, vendor: false },
+  { name: "Dedicated account manager", ray: true, vendor: false },
+  { name: "Live and scaling in days, not months", ray: true, vendor: true },
 ]
 
 function FeatureCell({ value, isVisible, delay }: { value: boolean | "partial"; isVisible: boolean; delay: number }) {
@@ -33,10 +37,10 @@ function FeatureCell({ value, isVisible, delay }: { value: boolean | "partial"; 
     return (
       <div className="flex justify-center">
         <div
-          className={`h-6 w-6 rounded-full bg-[var(--color-baltic-sea-800)] flex items-center justify-center ${baseClasses}`}
+          className={`h-6 w-6 flex items-center justify-center ${baseClasses}`}
           style={{ transitionDelay: `${delay}ms` }}
         >
-          <Minus weight="bold" className="h-4 w-4 text-[var(--color-baltic-sea-400)]" />
+          <Minus weight="bold" className="h-4 w-4 text-[var(--color-baltic-sea-500)]" />
         </div>
       </div>
     )
@@ -44,10 +48,10 @@ function FeatureCell({ value, isVisible, delay }: { value: boolean | "partial"; 
   return (
     <div className="flex justify-center">
       <div
-        className={`h-6 w-6 rounded-full bg-[var(--color-baltic-sea-900)] flex items-center justify-center ${baseClasses}`}
+        className={`h-6 w-6 rounded-full bg-[var(--color-destructive)]/15 flex items-center justify-center ${baseClasses}`}
         style={{ transitionDelay: `${delay}ms` }}
       >
-        <X weight="bold" className="h-4 w-4 text-[var(--color-baltic-sea-600)]" />
+        <X weight="bold" className="h-4 w-4 text-[var(--color-destructive)]" />
       </div>
     </div>
   )
@@ -81,7 +85,7 @@ export function Comparison() {
             Comparison
           </span>
           <h2 className="mt-3 text-3xl font-bold text-[var(--color-baltic-sea-100)] md:text-4xl text-balance">
-            Why teams choose Anchor
+            Compare before you commit
           </h2>
         </div>
 
@@ -95,12 +99,15 @@ export function Comparison() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-[var(--color-baltic-sea-800)]">
-                  <th className="text-left p-4 lg:p-6 text-sm font-medium text-[var(--color-baltic-sea-400)]">
-                    Feature
+                  <th className="text-left p-4 lg:p-6 text-sm font-medium text-[var(--color-baltic-sea-400)] w-1/2">
+                    What buyers actually care about
                   </th>
-                  <th className="p-4 lg:p-6 text-sm font-semibold text-[var(--color-keppel-400)]">Anchor</th>
-                  <th className="p-4 lg:p-6 text-sm font-medium text-[var(--color-baltic-sea-400)]">Kubernetes</th>
-                  <th className="p-4 lg:p-6 text-sm font-medium text-[var(--color-baltic-sea-400)]">Lambda</th>
+                  <th className="p-4 lg:p-6 text-sm font-semibold text-[var(--color-keppel-400)] bg-[var(--color-keppel-950)]/40">
+                    RAY Advertising
+                  </th>
+                  <th className="p-4 lg:p-6 text-sm font-medium text-[var(--color-baltic-sea-400)]">
+                    Typical Lead Vendor
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -112,15 +119,14 @@ export function Comparison() {
                     }`}
                     style={{ transitionDelay: `${300 + i * 60}ms` }}
                   >
-                    <td className="p-4 lg:p-6 text-sm text-[var(--color-baltic-sea-300)]">{feature.name}</td>
-                    <td className="p-4 lg:p-6">
-                      <FeatureCell value={feature.anchor} isVisible={isVisible} delay={400 + i * 60} />
+                    <td className="p-4 lg:p-6 text-sm text-[var(--color-baltic-sea-300)] text-pretty">
+                      {feature.name}
+                    </td>
+                    <td className="p-4 lg:p-6 bg-[var(--color-keppel-950)]/40">
+                      <FeatureCell value={feature.ray} isVisible={isVisible} delay={400 + i * 60} />
                     </td>
                     <td className="p-4 lg:p-6">
-                      <FeatureCell value={feature.kubernetes} isVisible={isVisible} delay={450 + i * 60} />
-                    </td>
-                    <td className="p-4 lg:p-6">
-                      <FeatureCell value={feature.lambda} isVisible={isVisible} delay={500 + i * 60} />
+                      <FeatureCell value={feature.vendor} isVisible={isVisible} delay={450 + i * 60} />
                     </td>
                   </tr>
                 ))}

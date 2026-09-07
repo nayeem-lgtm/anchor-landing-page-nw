@@ -5,79 +5,70 @@ import { useEffect, useRef, useState } from "react"
 const TESTIMONIALS_ROW_1 = [
   {
     quote:
-      "We migrated 47 agents from our custom Kubernetes setup to Anchor in a weekend. Cold starts went from 8 seconds to under 50ms.",
-    author: "Sarah Chen",
-    role: "Platform Lead",
-    company: "Nexus AI",
-    avatar: "SC",
+      "We've tested a lot of call partners. RAY is one of the few where the QA actually holds up at volume — the transfers connect, the intent is real, and our agents aren't wasting time. Contact rates went up within the first two weeks.",
+    author: "VP of Acquisition",
+    role: "National final expense carrier",
+    company: "Final Expense",
+    avatar: "FE",
   },
   {
     quote:
-      "The observability alone is worth it. We finally understand what our agents are actually doing in production.",
-    author: "Marcus Webb",
-    role: "CTO",
-    company: "Automate.io",
-    avatar: "MW",
+      "During AEP we needed to scale fast without the lead quality falling apart. RAY held the standard even when we tripled our daily caps. That's rare.",
+    author: "Director of Sales",
+    role: "Medicare-focused agency",
+    company: "Medicare",
+    avatar: "MC",
   },
   {
     quote:
-      "Anchor lets us focus on agent logic instead of infrastructure. Our deployment time went from hours to seconds.",
-    author: "Priya Sharma",
-    role: "Engineering Manager",
-    company: "DataFlow",
-    avatar: "PS",
+      "The lead-to-appointment rate is the number I actually care about, and RAY's beats every other source we run. Their team optimizes with us instead of just handing over a feed.",
+    author: "Marketing Manager",
+    role: "Regional solar installer",
+    company: "Home Services / Solar",
+    avatar: "HS",
   },
   {
-    quote: "Finally, infrastructure that actually understands what agents need. The auto-scaling is magic.",
-    author: "James Liu",
-    role: "Founder",
-    company: "AgentStack",
-    avatar: "JL",
-  },
-  {
-    quote: "We went from managing 12 different services to one Anchor config file. Incredible developer experience.",
-    author: "Elena Rodriguez",
-    role: "Staff Engineer",
-    company: "ScaleAI",
-    avatar: "ER",
+    quote:
+      "Real-time delivery and clean source-level reporting mean I can see exactly what's working and shift budget the same day. Full transparency, no black box.",
+    author: "Performance Marketing Lead",
+    role: "Auto insurance brand",
+    company: "Auto Insurance",
+    avatar: "AI",
   },
 ]
 
 const TESTIMONIALS_ROW_2 = [
   {
-    quote: "Our agents handle 10x more requests with Anchor's intelligent caching. Performance is unreal.",
-    author: "David Park",
-    role: "VP Engineering",
-    company: "Synth Labs",
-    avatar: "DP",
+    quote:
+      "Compliance is non-negotiable in our space. RAY's TCPA and TrustedForm coverage gives our legal team peace of mind, and the leads still convert. Both, not one or the other.",
+    author: "Head of Growth",
+    role: "Debt relief company",
+    company: "Finance / Debt Relief",
+    avatar: "DR",
   },
   {
-    quote: "The git-native workflow means our whole team can ship agent updates without touching infrastructure.",
-    author: "Aisha Patel",
-    role: "Tech Lead",
-    company: "Cortex",
-    avatar: "AP",
-  },
-  {
-    quote: "Anchor's GPU acceleration cut our inference costs by 60%. The ROI was immediate.",
-    author: "Michael Torres",
-    role: "ML Platform Lead",
-    company: "DeepMind Labs",
+    quote:
+      "Qualified intake calls, pre-screened, on the verticals we asked for. Our intake team spends time closing instead of filtering. Volume scaled cleanly.",
+    author: "Case Acquisition Manager",
+    role: "Mass tort law firm",
+    company: "Legal / Mass Tort",
     avatar: "MT",
   },
   {
-    quote: "Security and compliance baked in from day one. Our enterprise clients love it.",
-    author: "Rachel Kim",
-    role: "Security Lead",
-    company: "TrustAI",
-    avatar: "RK",
+    quote:
+      "What sets RAY apart is the account management. When something needs adjusting, there's a real person who knows our campaign and acts fast.",
+    author: "Owner",
+    role: "ACA insurance agency",
+    company: "ACA",
+    avatar: "AC",
   },
   {
-    quote: "From prototype to production in minutes, not months. Anchor changed how we build.",
-    author: "Tom Anderson",
-    role: "CEO",
-    company: "BuildFast",
-    avatar: "TA",
+    quote:
+      "We buy across a lot of networks. RAY is the one I trust when quality matters more than just hitting a volume number.",
+    author: "Media Buyer",
+    role: "Multi-vertical lead buyer",
+    company: "General",
+    avatar: "MB",
   },
 ]
 
@@ -104,10 +95,11 @@ function TestimonialCard({
         </div>
         <div>
           <div className="font-medium text-[var(--color-baltic-sea-200)] text-sm">{testimonial.author}</div>
-          <div className="text-xs text-[var(--color-baltic-sea-500)]">
-            {testimonial.role}, {testimonial.company}
-          </div>
+          <div className="text-xs text-[var(--color-baltic-sea-500)]">{testimonial.role}</div>
         </div>
+        <span className="ml-auto rounded-full border border-[var(--color-keppel-900)] bg-[var(--color-keppel-950)] px-2.5 py-1 text-[10px] font-medium uppercase tracking-wide text-[var(--color-keppel-400)] whitespace-nowrap">
+          {testimonial.company}
+        </span>
       </div>
     </div>
   )
@@ -174,13 +166,21 @@ export function Testimonials() {
       {/* Section header */}
       <div className="mx-auto max-w-[1400px] px-2.5 sm:px-6 lg:px-12">
         <div
-          className={`text-center max-w-2xl mx-auto mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-12 blur-sm"}`}
+          className={`relative text-center max-w-2xl mx-auto mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-12 blur-sm"}`}
         >
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-x-8 -inset-y-6 -z-10 blur-2xl"
+            style={{
+              background:
+                "radial-gradient(55% 65% at 50% 50%, color-mix(in oklch, var(--background) 82%, transparent) 0%, color-mix(in oklch, var(--background) 45%, transparent) 50%, transparent 78%)",
+            }}
+          />
           <span className="text-sm font-medium text-[var(--color-keppel-400)] uppercase tracking-wider">
             Testimonials
           </span>
           <h2 className="mt-3 text-3xl font-bold text-[var(--color-baltic-sea-100)] md:text-4xl text-balance">
-            Loved by builders worldwide
+            Trusted by Industry Leaders
           </h2>
         </div>
       </div>
