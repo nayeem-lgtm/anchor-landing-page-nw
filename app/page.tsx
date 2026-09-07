@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/hero-section"
 import { LogoCloud } from "@/components/logo-cloud"
 import { WhyRay } from "@/components/why-ray"
 import { RequirementsFlow } from "@/components/requirements-flow"
-import { TerminalDemo } from "@/components/terminal-demo"
+import { DemandEngine } from "@/components/demand-engine"
 import { Pricing } from "@/components/pricing"
 import { Testimonials } from "@/components/testimonials"
 import { Comparison } from "@/components/comparison"
@@ -20,7 +20,7 @@ export default function Home() {
         <LogoCloud />
         <WhyRay />
         <RequirementsFlow />
-        <TerminalDemo />
+        <DemandEngine />
         <Testimonials />
         <Comparison />
         <Pricing />
