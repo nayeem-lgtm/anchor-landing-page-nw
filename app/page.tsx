@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
+import { LiveDeliveryFeed } from "@/components/live-delivery-feed"
 import { LogoCloud } from "@/components/logo-cloud"
 import { BentoGrid } from "@/components/bento-grid"
 import { HowItWorks } from "@/components/how-it-works"
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
+        <LiveDeliveryFeed />
         <LogoCloud />
         <BentoGrid />
         <HowItWorks />
