@@ -1,3 +1,5 @@
+import { ParticleField } from "@/components/particle-field"
+
 const PARTICLES = [
   { left: "8%", size: 3, delay: "0s", duration: "14s" },
   { left: "18%", size: 2, delay: "3s", duration: "18s" },
@@ -104,6 +106,9 @@ export function SiteBackground() {
           />
         ))}
       </div>
+
+      {/* Animated particle network overlay */}
+      <ParticleField />
 
       {/* Vignette to keep edges grounded */}
       <div
