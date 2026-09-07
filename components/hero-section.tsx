@@ -86,7 +86,7 @@ export function HeroSection() {
                 size="lg"
                 className="bg-[var(--color-keppel-500)] hover:bg-[var(--color-keppel-600)] text-[var(--color-keppel-950)] font-semibold px-6"
               >
-                Start deploying
+                Get High Intent Traffic
                 <ArrowRight className="ml-2 h-4 w-4" weight="bold" />
               </Button>
               <Button
@@ -94,7 +94,7 @@ export function HeroSection() {
                 size="lg"
                 className="text-[var(--color-baltic-sea-300)] hover:text-[var(--color-baltic-sea-100)] hover:bg-[var(--color-baltic-sea-900)]"
               >
-                View documentation
+                See how it works
               </Button>
             </div>
           </div>
