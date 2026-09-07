@@ -43,7 +43,7 @@ export function SiteBackground() {
         className="ambient-animate absolute -top-40 right-[-10%] h-[560px] w-[560px] rounded-full blur-[120px] will-change-transform"
         style={{
           background:
-            "radial-gradient(circle, color-mix(in oklch, var(--color-keppel-500) 24%, transparent) 0%, transparent 70%)",
+            "radial-gradient(circle, color-mix(in oklch, var(--color-keppel-500) 13%, transparent) 0%, transparent 70%)",
           animation: "drift-a 26s ease-in-out infinite",
         }}
       />
@@ -53,7 +53,7 @@ export function SiteBackground() {
         className="ambient-animate absolute top-[42%] left-[-12%] h-[520px] w-[520px] rounded-full blur-[130px] will-change-transform"
         style={{
           background:
-            "radial-gradient(circle, color-mix(in oklch, var(--color-keppel-700) 20%, transparent) 0%, transparent 70%)",
+            "radial-gradient(circle, color-mix(in oklch, var(--color-keppel-700) 12%, transparent) 0%, transparent 70%)",
           animation: "drift-b 32s ease-in-out infinite",
         }}
       />
@@ -63,7 +63,7 @@ export function SiteBackground() {
         className="ambient-animate absolute bottom-[-6%] left-1/2 h-[480px] w-[680px] rounded-full blur-[140px] will-change-transform"
         style={{
           background:
-            "radial-gradient(circle, color-mix(in oklch, var(--color-keppel-600) 14%, transparent) 0%, transparent 70%)",
+            "radial-gradient(circle, color-mix(in oklch, var(--color-keppel-600) 8%, transparent) 0%, transparent 70%)",
           animation: "drift-c 30s ease-in-out infinite",
         }}
       />
@@ -73,7 +73,7 @@ export function SiteBackground() {
         className="ambient-animate absolute bottom-[6%] right-[-8%] h-[480px] w-[480px] rounded-full blur-[130px] will-change-transform"
         style={{
           background:
-            "radial-gradient(circle, color-mix(in oklch, var(--color-baltic-sea-700) 32%, transparent) 0%, transparent 70%)",
+            "radial-gradient(circle, color-mix(in oklch, var(--color-baltic-sea-700) 20%, transparent) 0%, transparent 70%)",
           animation: "drift-a 34s ease-in-out infinite reverse",
         }}
       />

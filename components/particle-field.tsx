@@ -93,7 +93,7 @@ export function ParticleField() {
           const dy = a.y - b.y
           const dist = Math.hypot(dx, dy)
           if (dist < LINK_DIST) {
-            const alpha = (1 - dist / LINK_DIST) * 0.5
+            const alpha = (1 - dist / LINK_DIST) * 0.22
             ctx!.strokeStyle = `rgba(${KEPPEL}, ${alpha})`
             ctx!.lineWidth = 1
             ctx!.beginPath()
@@ -108,9 +108,9 @@ export function ParticleField() {
       for (const n of nodes) {
         ctx!.beginPath()
         ctx!.arc(n.x, n.y, n.r, 0, Math.PI * 2)
-        ctx!.fillStyle = `rgba(${KEPPEL}, 0.9)`
-        ctx!.shadowColor = `rgba(${KEPPEL}, 0.9)`
-        ctx!.shadowBlur = 8
+        ctx!.fillStyle = `rgba(${KEPPEL}, 0.45)`
+        ctx!.shadowColor = `rgba(${KEPPEL}, 0.4)`
+        ctx!.shadowBlur = 5
         ctx!.fill()
         ctx!.shadowBlur = 0
       }
@@ -154,7 +154,7 @@ export function ParticleField() {
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 z-0 h-full w-full"
+      className="pointer-events-none fixed inset-0 z-0 h-full w-full opacity-60"
       style={{
         maskImage: "radial-gradient(ellipse 110% 100% at 50% 40%, black 55%, transparent 100%)",
         WebkitMaskImage: "radial-gradient(ellipse 110% 100% at 50% 40%, black 55%, transparent 100%)",

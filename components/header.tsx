@@ -21,17 +21,8 @@ export function Header() {
       <header className="fixed top-0 left-0 right-0 z-50">
         <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-2.5 sm:px-6 lg:px-12">
           {/* Logo - always stays at top */}
-          <a href="#" className="flex items-center gap-2" aria-label="RAY Advertising home">
-            <img src="/images/ray-logo-white.png" alt="RAY Advertising" className="h-9 w-9 object-contain" />
-            <span
-              className={`
-                text-xl font-semibold tracking-tight text-[var(--color-baltic-sea-50)]
-                transition-all duration-500 overflow-hidden whitespace-nowrap
-                ${scrolled ? "max-w-0 opacity-0" : "max-w-[100px] opacity-100"}
-              `}
-            >
-              RAY
-            </span>
+          <a href="#" className="flex items-center" aria-label="RAY Advertising home">
+            <img src="/images/ray-logo-white.png" alt="RAY Advertising" className="h-14 w-14 object-contain" />
           </a>
 
           {/* Navigation - only shows at top, replaced by floating CTA when scrolled */}
