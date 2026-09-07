@@ -210,17 +210,20 @@ export function HeroSection() {
               v2.0 now available
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[var(--color-baltic-sea-50)] leading-[1.1]">
-              Containers for
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[var(--color-baltic-sea-50)] leading-[1.1] text-balance">
+              High Intent.
               <br />
-              <span className="text-[var(--color-keppel-400)]">autonomous</span>
-              <br />
-              agents
+              <span className="text-[var(--color-keppel-400)]">High Impact.</span>
             </h1>
 
-            <p className="mt-6 text-lg text-[var(--color-baltic-sea-400)] max-w-md leading-relaxed">
-              Deploy AI agents in isolated, secure containers with sub-50ms cold starts. Scale from zero to thousands
-              instantly.
+            <p className="mt-6 text-lg text-[var(--color-baltic-sea-200)] max-w-md leading-relaxed">
+              We connect your business with consumers who are ready to act.
+            </p>
+
+            <p className="mt-4 text-base text-[var(--color-baltic-sea-400)] max-w-md leading-relaxed text-pretty">
+              Reach qualified customers through performance-driven acquisition. We connect real consumer demand with
+              businesses ready to serve it—delivering opportunities built around intent, relevance, and measurable
+              performance.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
